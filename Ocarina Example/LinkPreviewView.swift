@@ -254,7 +254,7 @@ class LinkPreviewView: UIControl {
         
         var backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1.0)
         if self.isHighlighted || self.isSelected {
-            backgroundColor = UIColor(red:0.9, green:0.9, blue:0.9, alpha:1)
+            backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)
         }
         self.backgroundColor = backgroundColor
         self.titleLabel.backgroundColor = backgroundColor
@@ -275,7 +275,7 @@ class LinkPreviewView: UIControl {
         
     }
     
-    //MARK: - Layout
+    // MARK: - Layout
     
     private let videoRatio: CGFloat = 16 / 9
     private let viewInsetsLink = UIEdgeInsets(top: 9, left: 9, bottom: 9, right: 9)
@@ -323,7 +323,7 @@ class LinkPreviewView: UIControl {
         domainSize.width = min(domainSize.width, descriptionRect.width)
         
         guard self.titleLabel.attributedText != nil else {
-            var yPosition = (descriptionRect.height-domainSize.height)/2
+            var yPosition = (descriptionRect.height - domainSize.height) / 2
             yPosition += insets.top
             
             self.domainLabel.frame = CGRect(origin: CGPoint(x: xPosition, y: yPosition), size: domainSize)
@@ -337,7 +337,7 @@ class LinkPreviewView: UIControl {
         var titleSize = self.titleLabel.sizeThatFits(maxSize)
         titleSize.width = min(titleSize.width, descriptionRect.width)
         let combinedHeight = titleSize.height + domainSize.height + titleToDomainSpacing
-        var yPosition = (descriptionRect.height-combinedHeight)/2
+        var yPosition = (descriptionRect.height - combinedHeight) / 2
         yPosition += insets.top
         
         self.titleLabel.frame = CGRect(origin: CGPoint(x: xPosition, y: yPosition), size: titleSize)
@@ -348,7 +348,7 @@ class LinkPreviewView: UIControl {
         
     }
     
-    //MARK: - Size
+    // MARK: - Size
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: UIViewNoIntrinsicMetric, height: 78)

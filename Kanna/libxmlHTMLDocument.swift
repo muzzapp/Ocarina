@@ -31,10 +31,10 @@ import SwiftLibXML2
 libxmlHTMLDocument
 */
 internal final class libxmlHTMLDocument: HTMLDocument {
-    fileprivate var docPtr:   htmlDocPtr? = nil
+    fileprivate var docPtr: htmlDocPtr? = nil
     fileprivate var rootNode: XMLElement?
     fileprivate var html: String
-    fileprivate var url:  String?
+    fileprivate var url: String?
     fileprivate var encoding: String.Encoding
     
     var text: String? {
