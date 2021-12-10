@@ -11,7 +11,7 @@ let package = Package(
         .library(name: "Ocarina", targets: ["Ocarina"])
     ],
     dependencies: [
-        .package(url: "https://github.com/tid-kijyun/Kanna", from: "5.2.3"),
+        .package(url: "https://github.com/tid-kijyun/Kanna", exact: "5.2.3"),
     ],
     targets: [
         .target(
