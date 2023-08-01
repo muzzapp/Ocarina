@@ -243,8 +243,7 @@ extension OcarinaManager: URLSessionDataDelegate {
             do {
                 html = try HTML(html: data, encoding: .utf8)
             } catch {
-                let newError = error ?? NSError(domain: "co.awkward.ocarina", code: 501, userInfo: [NSLocalizedDescriptionKey: "Invalid data received from URL"])
-                self.completeRequestsWithError(newError, for: originalURL)
+                self.completeRequestsWithError(error, for: originalURL)
             }
         }
         
