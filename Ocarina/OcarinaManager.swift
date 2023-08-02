@@ -240,11 +240,7 @@ extension OcarinaManager: URLSessionDataDelegate {
         var html: HTMLDocument? = nil
 
         if let data = data {
-            do {
-                html = try HTML(html: data, encoding: .utf8)
-            } catch {
-                self.completeRequestsWithError(error, for: originalURL)
-            }
+            html = try? HTML(html: data, encoding: .utf8)
         }
         
         if let urlInformation = self.information(for: url, originalURL: originalURL, html: html, response: response) {
