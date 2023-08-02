@@ -238,6 +238,7 @@ extension OcarinaManager: URLSessionDataDelegate {
         }
         
         var html: HTMLDocument? = nil
+
         if let data = data {
             html = try? HTML(html: data, encoding: .utf8)
         }
