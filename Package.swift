@@ -5,13 +5,13 @@ import PackageDescription
 let package = Package(
     name: "Ocarina",
         platforms: [
-        .iOS(.v9)
+        .iOS(.v13)
     ],
     products: [
         .library(name: "Ocarina", targets: ["Ocarina"])
     ],
     dependencies: [
-        .package(url: "https://github.com/tid-kijyun/Kanna", .exact("5.2.7")),
+        .package(url: "https://github.com/tid-kijyun/Kanna", .exact("6.1.0")),
     ],
     targets: [
         .target(
